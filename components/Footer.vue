@@ -10,9 +10,5 @@
 </template>
 
 <script>
-import NumeroContador from '../components/NumeroContador.vue'
-
 export default {}
 </script>
-
-<style></style>
