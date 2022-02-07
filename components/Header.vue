@@ -10,10 +10,7 @@
 </template>
 
 <script>
-import Ordenar from '../components/Ordenar.vue'
-import Filtrar from '../components/Filtrar.vue'
 export default {
-  components: { Ordenar },
   name: 'Headerpage',
 }
 </script>

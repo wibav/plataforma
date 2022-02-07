@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import Contador from '../components/Contador.vue'
 export default {
   name: 'ContadorPage',
   data() {
