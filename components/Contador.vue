@@ -7,7 +7,7 @@
       <div class="panelConatdor">
         <ul>
           <li class="liContador">
-            <button @click="$nuxt.$emit('restar', index)">
+            <button class="butonContador" @click="$nuxt.$emit('restar', index)">
               <img
                 class="imgContador"
                 src="../static/signo-menos-de-una-linea-en-posicion-horizontal.png"
@@ -15,16 +15,19 @@
               />
             </button>
           </li>
-          <li class="liContador">
+          <li class="liContadoR">
             <label class="inputN">{{ contador }}</label>
           </li>
           <li class="liContador">
-            <button @click="$nuxt.$emit('sumar', index)">
+            <button class="butonContador" @click="$nuxt.$emit('sumar', index)">
               <img class="imgContador" src="../static/mas.png" alt="" />
             </button>
           </li>
           <li class="liContador">
-            <button @click="$nuxt.$emit('eliminar', index)">
+            <button
+              class="butonContador"
+              @click="$nuxt.$emit('eliminar', index)"
+            >
               <img class="imgContador" src="../static/basura (1).png" alt="" />
             </button>
           </li>

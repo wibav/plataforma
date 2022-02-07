@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="contFooter">
-      <div class="contOrden"></div>
+      <div></div>
       <div class="contFiltrar">
         <NumeroContador />
       </div>

@@ -1,11 +1,11 @@
 <template>
   <div>
     <ul>
-      <li class="menuLabel">
-        <label class="inputContador" for="">13</label>
+      <li class="menuFooter">
+        <label class="labelContador" for="">13</label>
       </li>
-      <li class="menuFiltrar">
-        <a class="botonFiltrar" href="">Filtrar</a>
+      <li class="menuFooter">
+        <a class="botonCantidad" href="">Filtrar</a>
       </li>
     </ul>
   </div>

@@ -1,6 +1,10 @@
 <template>
   <div>
-    <button v-if="contadores.length < 20" @click="addContador">
+    <button
+      class="butonAgregar"
+      v-if="contadores.length < 20"
+      @click="addContador"
+    >
       Agregar Contador
     </button>
     <div v-for="(contador, index) in contadores" :key="index">
