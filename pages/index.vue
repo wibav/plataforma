@@ -1,8 +1,11 @@
 <template>
-  <Tutorial />
+  <div>
+    <Contador />
+  </div>
 </template>
 
 <script>
+import Contador from '../components/Contador.vue'
 export default {
   name: 'IndexPage',
   computed: {
