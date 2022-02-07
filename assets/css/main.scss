@@ -1,0 +1,124 @@
+$color-primario: #4c0495;
+$color-botones: #1472df;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contNav {
+  background-color: $color-primario;
+  width: 100vw;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+// SECCION  ORDENAR
+.sOrdenar {
+  background-color: #1472df;
+  margin: 0px 30px;
+  outline: none;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  padding: 9px 46px;
+  border: none;
+  border-radius: 5px;
+}
+
+.optionF {
+  font-weight: bold;
+}
+
+.contFiltrar a {
+  color: aliceblue;
+}
+
+.contFiltrar {
+  display: flex;
+  justify-content: flex-end;
+}
+// SECCION FILTRAR
+.menuFiltrar {
+  display: inline;
+  margin: 0px 20px;
+}
+
+.inputContador {
+  border: none;
+  text-align: center;
+  font-size: 1em;
+  padding: 10px 5px;
+  border-radius: 10px;
+  width: 60px;
+  font-weight: bold;
+  outline: none;
+}
+
+.botonFiltrar {
+  background-color: #1472df;
+  margin: 0px 30px;
+  outline: none;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  padding: 9px 46px;
+  border: none;
+  border-radius: 5px;
+}
+
+// CONTADOR
+
+.conteConatdor {
+  width: 95%;
+  background-color: #68ed9d;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 10vh;
+  border-radius: 10px;
+  margin: 36px;
+  align-items: center;
+}
+
+.liContador {
+  display: inline;
+  border: none;
+  text-align: center;
+  font-size: 1em;
+  padding: 10px 5px;
+  border-radius: 10px;
+  width: 60px;
+  font-weight: bold;
+  outline: none;
+  background-color: white;
+  margin: 0 20px;
+}
+
+.titulo_contador {
+  color: white;
+  margin: 0px 35px;
+}
+
+.panelConatdor {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.inputN {
+  border: none;
+  text-align: center;
+  font-size: 1em;
+  padding: 10px 5px;
+  border-radius: 10px;
+  width: 60px;
+  font-weight: bold;
+  outline: none;
+}
+
+.imgContador {
+  height: 25px;
+  width: 25px;
+}
