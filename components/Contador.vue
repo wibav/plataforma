@@ -21,9 +21,9 @@
               />
             </a>
           </li>
-          <li class="liContador">
+          <li class="basureroContador">
             <a href="">
-              <img class="imgContador" src="../static/basura (1).png" alt="" />
+              <img class="imgBasurero" src="../static/basura (1).png" alt="" />
             </a>
           </li>
         </ul>
