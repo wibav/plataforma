@@ -33,6 +33,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-vuex-localstorage',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
