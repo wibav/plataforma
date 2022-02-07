@@ -5,7 +5,7 @@ export const state = () => ({
 export const mutations = {
   setContadores(state, data = {}) {
     console.log('setContadores: ', data)
-    state.contadores = data
+    state.contadores.push(data)
   },
   sumar(state, data = {}) {
     // console.log('sumar: ', data)

@@ -38,14 +38,14 @@ export default {
   methods: {
     addContador() {
       let contadores = []
-      contadores.push({
+      contadores = {
         nombre: 'contador ' + this.contadores.length,
         contador: 0,
         position:
           this.contadores.length == 0
             ? 1
             : this.contadores[this.contadores.length - 1].position + 1,
-      })
+      }
       this.$store.commit('localStorage/setContadores', contadores)
     },
     sumar(index) {
