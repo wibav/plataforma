@@ -1,8 +1,5 @@
 <template>
   <div class="bodyI">
-    <button class="butonAgregar" :disabled="isDisabled" @click="addContador">
-      Agregar Contador
-    </button>
     <Modal />
     <div v-for="(contador, index) in contadores" :key="index">
       <Contador
@@ -37,10 +34,6 @@ export default {
         this.$store.state.localStorage.status &&
         this.$store.state.sessionStorage.status
       )
-    },
-    isDisabled() {
-      // you can  check your form is filled or not here.
-      return this.contadores.length < 20 ? false : true
     },
   },
   created() {
