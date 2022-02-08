@@ -1,15 +1,29 @@
 <template>
-  <div>
-    <select class="sOrdenar" name="Ordenar" id="">
-      <option class="optionF" value="">Filtro 1</option>
-      <option class="optionF" value="">Filtro 2</option>
-      <option class="optionF" value="">Filtro 3</option>
+  <div class="bodyFiltro">
+    <select v-model="order" class="sOrdenar" name="Ordenar" v-on:change="selectItem">
+      <option class="optionF"
+        v-for="(value, key) in items"
+        :value="key"
+        :key="key"
+      >{{ value }}</option> 
     </select>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'ContadoresPage',
+  data() {
+    return {
+      order: this.$store.state.sessionStorage.order,
+      items: this.$store.state.sessionStorage.orderItems,
+    }
+  },
+  methods: {
+    selectItem() {
+      this.$store.commit('sessionStorage/setOrder', this.order)
+      
+    },
+  },
+}
 </script>
-
-<style></style>
