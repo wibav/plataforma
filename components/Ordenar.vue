@@ -1,11 +1,19 @@
 <template>
   <div class="bodyFiltro">
-    <select v-model="order" class="sOrdenar" name="Ordenar" v-on:change="selectItem">
-      <option class="optionF"
+    <select
+      v-model="order"
+      class="sOrdenar"
+      name="Ordenar"
+      v-on:change="selectItem"
+    >
+      <option
+        class="optionF"
         v-for="(value, key) in items"
         :value="key"
         :key="key"
-      >{{ value }}</option> 
+      >
+        {{ value }}
+      </option>
     </select>
   </div>
 </template>
@@ -22,7 +30,6 @@ export default {
   methods: {
     selectItem() {
       this.$store.commit('sessionStorage/setOrder', this.order)
-      
     },
   },
 }
