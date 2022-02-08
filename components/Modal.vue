@@ -42,6 +42,7 @@ export default {
       ocultar: 'modalCerrado',
       visible: false,
       nombre: '',
+      show: false,
     }
   },
   computed: {
@@ -56,6 +57,10 @@ export default {
     },
     agregar() {
       let contadores = []
+      if (this.nombre == '') {
+        this.show = true
+        return
+      }
       contadores = {
         nombre: this.nombre,
         contador: 0,
@@ -66,6 +71,7 @@ export default {
       }
       this.$store.commit('localStorage/setContadores', contadores)
       this.nombre = ''
+      this.show = false
       this.openModal(!this.visible)
     },
   },

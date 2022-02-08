@@ -21,14 +21,6 @@ export default {
       filtrado: [],
     }
   },
-  watch: {
-    filtro() {
-      this.filtrado = this.contadores.filter((contador) => {
-        return contador.contador >= this.filtro
-      })
-      console.log('filtrado: ', this.filtrado)
-    },
-  },
   computed: {
     loaded() {
       return (
@@ -43,7 +35,8 @@ export default {
   created() {
     this.$nuxt.$on('sumar', (index) => this.sumar(index)),
       this.$nuxt.$on('restar', (index) => this.restar(index)),
-      this.$nuxt.$on('eliminar', (index) => this.eliminar(index))
+      this.$nuxt.$on('eliminar', (index) => this.eliminar(index)),
+      this.$nuxt.$on('filtrar', (valor) => this.filtrar(valor))
   },
   methods: {
     sumar(index) {
@@ -55,13 +48,17 @@ export default {
     eliminar(index) {
       this.$store.commit('localStorage/eliminar', index)
     },
+    filtrar(filtro) {
+      this.filtrado = this.contadores.filter((item) => {
+        return item.contador >= filtro
+      })
+    },
   },
   mounted() {
     if (!this.loaded) {
       this.$store.dispatch('loadLocalStorage')
       this.$store.dispatch('loadSessionStorage')
     }
-    // console.log('Contadores: W', this.contadores)
   },
 }
 </script>
