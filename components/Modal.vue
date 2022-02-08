@@ -24,7 +24,7 @@
           <button class="botonContador" @click="agregar">
             Confirmar contador
           </button>
-          <button class="botonContador" @click="openModal(!visible)">
+          <button class="botonCancelar" @click="openModal(!visible)">
             Cancelar contador
           </button>
         </div>

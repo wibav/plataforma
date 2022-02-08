@@ -297,7 +297,7 @@ $color-botones: #1472df;
   background-color: #68ed9d;
   margin: 15% auto;
   border: 1px solid #888;
-  width: 96%;
+  width: 85%;
   height: 13vh;
   border-radius: 10px;
   display: grid;
@@ -348,7 +348,19 @@ $color-botones: #1472df;
   padding: 10px;
   border-radius: 10px;
   font-size: 1em;
-  background-color: #1472df;
+  background-color: #3e60f8;
+  color: white;
+  margin: 15px;
+  height: 50px;
+}
+
+.botonCancelar {
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1em;
+  background-color: #3e60f8;
   color: white;
   margin: 15px;
   height: 50px;
@@ -392,6 +404,17 @@ $color-botones: #1472df;
     margin: 0px 15px;
     height: 50px;
   }
+  .botonCancelar {
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    background-color: #3e60f8;
+    color: white;
+    margin: 0px 15px;
+    height: 50px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .panelConatdor {
@@ -411,7 +434,7 @@ $color-botones: #1472df;
     width: 60px;
     font-weight: bold;
     outline: none;
-    margin: 0 20px;
+    margin: 0 10px;
   }
 
   .conteConatdor {
@@ -502,7 +525,7 @@ $color-botones: #1472df;
 
   .menuFooter {
     display: inline;
-    margin: 0px 5px;
+    margin: 0px 3px;
   }
 
   .botonCantidad {
