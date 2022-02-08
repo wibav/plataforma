@@ -1,11 +1,16 @@
 export const state = () => ({
   contadores: [],
+  filtrado: [],
 })
 
 export const mutations = {
   setContadores(state, data = {}) {
-    console.log('setContadores: ', data)
+    // console.log('setContadores: ', data)
     state.contadores.push(data)
+  },
+  setFiltrado(state, data = {}) {
+    // console.log('setFiltrado: ', data)
+    state.filtrado = data
   },
   sumar(state, data = {}) {
     // console.log('sumar: ', data)
@@ -40,5 +45,11 @@ export const getters = {
       })
     }
     return total
+  },
+  getContadores(state) {
+    return state.contadores
+  },
+  getFiltrado(state) {
+    return state.filtrado
   },
 }
