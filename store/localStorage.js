@@ -9,11 +9,17 @@ export const mutations = {
   },
   sumar(state, data = {}) {
     // console.log('sumar: ', data)
-    state.contadores[data].contador++
+    state.contadores[data].contador <= 19
+      ? state.contadores[data].contador++
+      : state.contadores[data].contador
+    // state.contadores[data].contador++
   },
   restar(state, data = {}) {
     // console.log('restar: ', data)
-    state.contadores[data].contador--
+    state.contadores[data].contador >= 1
+      ? state.contadores[data].contador--
+      : state.contadores[data].contador
+    // state.contadores[data].contador--
   },
   eliminar(state, data = {}) {
     // console.log('eliminar: ', data)
@@ -28,9 +34,11 @@ export const mutations = {
 export const getters = {
   getTotal(state) {
     let total = 0
-    state.contadores.forEach((item) => {
-      total += item.contador
-    })
+    if (state.contadores.length > 0) {
+      state.contadores.forEach((item) => {
+        total += item.contador
+      })
+    }
     return total
   },
 }

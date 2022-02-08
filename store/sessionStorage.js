@@ -1,3 +1,9 @@
 export const state = () => ({
-  anyValues: 0,
+  filtro: 0,
 })
+
+export const mutations = {
+  setFiltro(state, data = {}) {
+    state.filtro = data
+  },
+}

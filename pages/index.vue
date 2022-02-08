@@ -1,10 +1,6 @@
 <template>
   <div class="bodyI">
-    <button
-      class="butonAgregar"
-      v-if="contadores.length < 20"
-      @click="addContador"
-    >
+    <button class="butonAgregar" :disabled="isDisabled" @click="addContador">
       Agregar Contador
     </button>
     <div v-for="(contador, index) in contadores" :key="index">
@@ -23,7 +19,16 @@ export default {
   data() {
     return {
       contadores: this.$store.state.localStorage.contadores,
+      filtro: this.$store.state.sessionStorage.filtro,
+      filtrado: [],
     }
+  },
+  watch: {
+    filtro() {
+      this.filtrado = this.contadores.filter((contador) => {
+        return contador.contador >= this.filtro
+      })
+    },
   },
   computed: {
     loaded() {
@@ -31,6 +36,10 @@ export default {
         this.$store.state.localStorage.status &&
         this.$store.state.sessionStorage.status
       )
+    },
+    isDisabled() {
+      // you can  check your form is filled or not here.
+      return this.contadores.length < 20 ? false : true
     },
   },
   created() {
@@ -66,7 +75,7 @@ export default {
       this.$store.dispatch('loadLocalStorage')
       this.$store.dispatch('loadSessionStorage')
     }
-    console.log('Contadores: W', this.contadores)
+    // console.log('Contadores: W', this.contadores)
   },
 }
 </script>

@@ -15,13 +15,9 @@
 export default {
   computed: {
     total() {
-      let total = 0
-      this.$store.state.localStorage.contadores.forEach((contador) => {
-        total += contador.contador
-      })
+      let total = this.$store.getters['localStorage/getTotal']
       return total
     },
   },
-  mounted() {},
 }
 </script>
