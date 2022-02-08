@@ -24,3 +24,13 @@ export const mutations = {
     state.contadores = []
   },
 }
+
+export const getters = {
+  getTotal(state) {
+    let total = 0
+    state.contadores.forEach((item) => {
+      total += item.contador
+    })
+    return total
+  },
+}
