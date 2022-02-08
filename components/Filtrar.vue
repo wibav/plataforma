@@ -35,6 +35,7 @@ export default {
     cambioFiltro() {
       if (this.filtro != '' && this.filtro >= 0) {
         this.$store.commit('sessionStorage/setFiltro', this.filtro)
+        $nuxt.$emit('filtrar', this.filtro)
       }
     },
   },
