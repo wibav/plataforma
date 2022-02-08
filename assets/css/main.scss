@@ -296,17 +296,15 @@ $color-botones: #1472df;
 .modal-content {
   background-color: #68ed9d;
   margin: 15% auto;
-  padding: 20px;
   border: 1px solid #888;
-  width: 50%;
-  height: 35vh;
+  width: 96%;
+  height: 13vh;
   border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .inputTitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .TitleContador {
   border: none;
@@ -314,8 +312,8 @@ $color-botones: #1472df;
   border-radius: 10px;
   font-size: 1em;
   font-weight: bold;
-  margin: 30px 0px;
   outline: none;
+  margin: 15px;
 }
 .close {
   color: #aaa;
@@ -334,7 +332,6 @@ $color-botones: #1472df;
 .contBotonConfirmar {
   display: flex;
   justify-content: flex-end;
-  margin: 50px 0;
 }
 
 .botonContador {
@@ -343,8 +340,10 @@ $color-botones: #1472df;
   padding: 10px;
   border-radius: 10px;
   font-size: 1em;
-  background-color: $color-botones;
+  background-color: #1472df;
   color: white;
+  margin: 15px;
+  height: 50px;
 }
 
 .botonModal {
@@ -373,6 +372,17 @@ $color-botones: #1472df;
     display: flex;
     justify-content: flex-end;
     margin: 15px 0;
+  }
+  .botonContador {
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    background-color: #1472df;
+    color: white;
+    margin: 0px 15px;
+    height: 50px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -506,5 +516,7 @@ $color-botones: #1472df;
     width: 85%;
     height: 35vh;
     border-radius: 10px;
+    display: flow-root;
+    grid-template-rows: 1fr 1fr;
   }
 }

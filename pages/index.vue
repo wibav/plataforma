@@ -1,10 +1,7 @@
 <template>
   <div class="bodyI">
-    <button class="butonAgregar" :disabled="isDisabled" @click="addContador">
-      Agregar Contador
-    </button>
     <Modal />
-    <div v-for="(contador, index) in contadores" :key="index">
+    <div v-for="(contador, index) in listado" :key="index">
       <Contador
         :nombre="contador.nombre"
         :contador="contador.contador"
@@ -29,6 +26,7 @@ export default {
       this.filtrado = this.contadores.filter((contador) => {
         return contador.contador >= this.filtro
       })
+      console.log('filtrado: ', this.filtrado)
     },
   },
   computed: {
@@ -38,9 +36,8 @@ export default {
         this.$store.state.sessionStorage.status
       )
     },
-    isDisabled() {
-      // you can  check your form is filled or not here.
-      return this.contadores.length < 20 ? false : true
+    listado() {
+      return this.filtrado.length > 0 ? this.filtrado : this.contadores
     },
   },
   created() {
@@ -49,18 +46,6 @@ export default {
       this.$nuxt.$on('eliminar', (index) => this.eliminar(index))
   },
   methods: {
-    addContador() {
-      let contadores = []
-      contadores = {
-        nombre: 'contador ' + this.contadores.length,
-        contador: 0,
-        position:
-          this.contadores.length == 0
-            ? 1
-            : this.contadores[this.contadores.length - 1].position + 1,
-      }
-      this.$store.commit('localStorage/setContadores', contadores)
-    },
     sumar(index) {
       this.$store.commit('localStorage/sumar', index)
     },
