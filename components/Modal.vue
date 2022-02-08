@@ -6,7 +6,6 @@
     <div id="myModal" v-bind:class="visible ? mostrar : ocultar">
       <!-- Modal content -->
       <div class="modal-content">
-        <span class="close" @click="openModal(!visible)">&times;</span>
         <div class="inputTitle">
           <input
             class="TitleContador"
@@ -17,6 +16,9 @@
         </div>
         <div class="contBotonConfirmar">
           <button class="botonContador">Confirmar contador</button>
+          <button class="botonContador" @click="openModal(!visible)">
+            Cancelar contador
+          </button>
         </div>
       </div>
     </div>
