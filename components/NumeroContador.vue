@@ -2,6 +2,9 @@
   <div>
     <ul>
       <li class="menuFooter">
+        <img class="imgSuma" src="../static/suma.png" alt="" />
+      </li>
+      <li class="menuFooter">
         <label class="labelContador" for="">{{ total }}</label>
       </li>
       <li class="menuFooter">

@@ -304,8 +304,16 @@ $color-botones: #1472df;
   grid-template-columns: 1fr 1fr;
 }
 
-.inputTitle {
+.mayor {
+  height: 4vh;
+  margin: -5px 0;
 }
+
+.imgSuma {
+  height: 4vh;
+  margin: -5px 0;
+}
+
 .TitleContador {
   border: none;
   padding: 14px 50px;
@@ -431,6 +439,23 @@ $color-botones: #1472df;
     margin: 0 12px;
     background-color: white;
   }
+  .botonFiltrar {
+    background-color: #1472df;
+    margin: 0px 15px;
+    outline: none;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 3px 2px 0px rgb(255 255 255 / 16%);
+  }
+
+  .menuFooter {
+    display: inline;
+    margin: 0px 15px;
+  }
 }
 
 @media only screen and (max-width: 425px) {
@@ -472,12 +497,12 @@ $color-botones: #1472df;
   }
   .menuFiltrar {
     display: inline;
-    margin: 0px 10px;
+    margin: 0px 5px;
   }
 
   .menuFooter {
     display: inline;
-    margin: 0px 10px;
+    margin: 0px 5px;
   }
 
   .botonCantidad {

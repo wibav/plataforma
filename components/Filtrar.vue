@@ -2,6 +2,13 @@
   <div>
     <ul>
       <li class="menuFiltrar">
+        <img
+          class="mayor"
+          src="../static/es-igual-o-mayor-que-el-simbolo.png"
+          alt=""
+        />
+      </li>
+      <li class="menuFiltrar">
         <input
           class="inputContador"
           type="number"
