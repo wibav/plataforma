@@ -4,9 +4,11 @@
       class="butonAgregar"
       v-if="contadores.length < 20"
       @click="addContador"
+      id="myBtn"
     >
       Agregar Contador
     </button>
+    <Modal />
     <div v-for="(contador, index) in contadores" :key="index">
       <Contador
         :nombre="contador.nombre"
@@ -18,7 +20,9 @@
 </template>
 
 <script>
+import Modal from '~/components/Modal.vue'
 export default {
+  components: { Modal },
   name: 'ContadorPage',
   data() {
     return {

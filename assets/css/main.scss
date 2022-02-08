@@ -266,6 +266,99 @@ $color-botones: #1472df;
   overflow: auto;
 }
 
+.modalCerrado {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modalOpen {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+// MODAL
+.modal-content {
+  background-color: #68ed9d;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  height: 35vh;
+  border-radius: 10px;
+}
+
+.inputTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TitleContador {
+  border: none;
+  padding: 14px 50px;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 30px 0px;
+  outline: none;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contBotonConfirmar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 50px 0;
+}
+
+.botonContador {
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1em;
+  background-color: $color-botones;
+  color: white;
+}
+
+.botonModal {
+  border: none;
+  background-color: #1472df;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 10px 35px;
+  box-shadow: 2px 3px 2px 0px rgb(255 255 255 / 16%);
+}
+
 // Responsive
 
 @media only screen and (max-width: 1024px) {
@@ -275,8 +368,13 @@ $color-botones: #1472df;
     align-items: center;
     padding: 0 40px;
   }
-}
 
+  .contBotonConfirmar {
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 0;
+  }
+}
 @media only screen and (max-width: 768px) {
   .panelConatdor {
     display: flex;
@@ -399,5 +497,14 @@ $color-botones: #1472df;
   .titulo_contador {
     color: white;
     margin: 15px 35px;
+  }
+  .modal-content {
+    background-color: #68ed9d;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 85%;
+    height: 35vh;
+    border-radius: 10px;
   }
 }
