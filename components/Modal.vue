@@ -19,6 +19,7 @@
             v-model="nombre"
             required
           />
+          <p class="mensajeEmer">Debe agregar un nombre</p>
         </div>
         <div class="contBotonConfirmar">
           <button class="botonContador" @click="agregar">
