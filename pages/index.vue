@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bodyI">
     <button
       class="butonAgregar"
       v-if="contadores.length < 20"
